@@ -1,19 +1,27 @@
 package edu.cmu.cs.cs214.lab02;
 
-import edu.cmu.cs.cs214.lab02.shapes.*;
+import edu.cmu.cs.cs214.lab02.shapes.Shape;
 
+/**
+ * .
+ */
 public class Renderer {
-    public Rectangle rectangle;
-    
-    Renderer(Rectangle rectangle) {
-        this.rectangle = rectangle;
-    }
+  private Shape shape;
 
-    void draw() {
-        double area = rectangle.getArea();
+  /**
+   * .
+   *
+   * @param shape .
+   */
+  public Renderer(Shape shape) {
+    this.shape = shape;
+  }
 
-        // assume implementation
-
-        System.out.println("Shape printed\n" + "Its area is " + area);
-    }
+  /**
+   * .
+   */
+  public void draw() {
+    System.out.println("Drawing shape: " + shape.getName());
+    System.out.println("Area: " + shape.getArea());
+  }
 }
